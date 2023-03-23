@@ -1,5 +1,23 @@
 %[fList,pList] = matlab.codetools.requiredFilesAndProducts('preprocess_dannce.m');
 
+'''
+input_params.fastvelocity_threshold=0.1
+input_params.moving_threshold=0.015
+input_params.fps=60
+filein = 
+fileoutput =
+
+animalname='mouse'
+
+% mouse: 16
+%default: 20
+% mouse_kyle: 20
+% mouse_toddy: 20
+
+'''
+
+
+
 % File Here to preprocess
 function ratception_struct = preprocess_dannce(filein,fileoutput,animalname,input_params)
 
