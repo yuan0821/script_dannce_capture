@@ -89,13 +89,25 @@ if isfield(datahere.predictions,'HeadBR')
 end
 
 
+% file specific changes in names
+if isfield(datahere.predictions,'Tail_base_')
+    f = fieldnames(datahere.predictions);
+    v = struct2cell(datahere.predictions);
+    f{strmatch('Tail_base_',f,'exact')} = 'tail_base_';
+    f{strmatch('Tail_mid_',f,'exact')} = 'tail_mid_';
+    f{strmatch('Tail_end_',f,'exact')} = 'tail_end_';
+    a = cell2struct(v,f);
+    disp(a)
+    datahere.predictions=a;
+end
+
 
 % parameters for preprocessing
 % Did not change this from 300 to 90 Hz b/c we changed difforder
 preprocessing_parameters = struct();
 preprocessing_parameters.fps = input_params.fps
 preprocessing_parameters.median_filt_length = 5;
-preprocessing_parameters.bad_frame_vel_thresh = 150; %this effectively turns the velocity criteria off
+preprocessing_parameters.bad_frame_vel_thresh = 25; %150, this effectively turns the velocity criteria off
 preprocessing_parameters.bad_frame_surround_flag = 0;
 preprocessing_parameters.bad_frame_surround_number = 1;
 preprocessing_parameters.interpolation_max_length = 5;
