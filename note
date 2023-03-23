@@ -1,0 +1,17 @@
+load_link_files:
+default: rat 20 : offset, shpulder, elbow, arm, knee
+mouse: skeleton rat16.mat
+mouse_kyle: 20 keypoint, wrist, ankle, shoulder,
+mouse-toddy: 20 keypoint, wrist, ankle,,
+
+
+
+preprocess_dannce:
+
+filein='F:\CAPTURE_demo-master\CAPTURE_demo-master\data\mouse_4\predictions.mat'
+fileoutput='F:\CAPTURE_demo-master\CAPTURE_demo-master\data\mouse_4\restruct.mat'
+animalname='mouse'
+input_params.fps=60;
+ratception_struct = preprocess_dannce(filein,fileoutput,animalname,input_params)
+
+
