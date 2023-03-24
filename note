@@ -15,3 +15,18 @@ input_params.fps=60;
 ratception_struct = preprocess_dannce(filein,fileoutput,animalname,input_params)
 
 
+
+
+# Limits (in mm) to 3D volumes anchored on subject
+vmin: -60
+vmax: 60
+# Number of voxels along each spatial dimension
+nvox: 64
+
+
+
+# Limits (in mm) to 3D volumes anchored on subject
+vmin: -120
+vmax: 120
+# Number of voxels along each spatial dimension
+nvox: 80
