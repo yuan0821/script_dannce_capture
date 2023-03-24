@@ -1,0 +1,30 @@
+
+behaviroal embedding: 60 features for mouse markerless;
+linkage tree: 
+top 10: eudidean distance
+top 10: length
+top 10: joint angle
+
+
+wavelet transform:
+top 10: head
+tio 10: trunk;
+top 10: appendage
+
+
+t-sne:
+the: 0.5
+6hz
+perplexity: 30
+2d-berbes-space
+density kernel
+watershed 
+
+
+clustering:
+2 observer;
+24 distances;
+
+
+
+power density:
