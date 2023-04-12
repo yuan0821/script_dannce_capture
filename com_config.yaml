@@ -10,7 +10,7 @@ crop_width: [0, 2560]
 # Number of channels for each input image (e.g. RGB == 3)
 # n_channels_in: 3
 mono: True
-
+com_finetune_weights: '../markerless_mouse_1/COM/weights/'
 
 ######################################################################### COM 
 # if you use 5-cam-pre, then set 5; if use 3-cam-pre, then set 3; if use 6-cam-pre, then set 6.
